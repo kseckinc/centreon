@@ -373,4 +373,19 @@ class ServiceConfigurationRepositoryRDB extends AbstractRepositoryDRB implements
         }
         return $services;
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function removeServicesOnhost(int $hostId): void
+    {
+        $statement = $this->db->prepare(
+            "DELETE service FROM `:db`.service
+            INNER JOIN `:db`.host_service_relation hsr
+                ON hsr.service_service_id = service.service_id
+            WHERE hsr.host_host_id = :host_id"
+        );
+        $statement->bindValue(':host_id', $hostId, \PDO::PARAM_INT);
+        $statement->execute();
+    }
 }

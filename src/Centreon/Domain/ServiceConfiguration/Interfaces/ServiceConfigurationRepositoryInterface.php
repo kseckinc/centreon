@@ -87,4 +87,12 @@ interface ServiceConfigurationRepositoryInterface extends AccessControlListRepos
      * @throws \Exception
      */
     public function findServicesByHost(Host $host): array;
+
+    /**
+     * Removes all services related to a host.
+     *
+     * @param int $hostId
+     * @throws \Exception
+     */
+    public function removeServicesOnhost(int $hostId): void;
 }
