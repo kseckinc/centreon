@@ -117,7 +117,7 @@ class FindHost
         }
 
         /**
-         * Offuscate the passwords in Host commandLine
+         * Obfuscate the passwords in Host commandLine
          * @todo Re-write this code when monitoring repository will be migrated to new architecture
          */
         $host->setCommandLine($this->obfuscatePasswordInHostCommandLine($host));
