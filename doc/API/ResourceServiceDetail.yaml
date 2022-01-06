@@ -367,7 +367,7 @@ Monitoring.ServiceDetail:
               type: string
               nullable: true
               description: "Service resource timeline endpoint"
-              example: "/centreon/api/v21.10/monitoring/hosts/202/services/1533/timeline"
+              example: "/centreon/api/v22.04/monitoring/hosts/202/services/1533/timeline"
             status_graph:
               type: string
               nullable: true
