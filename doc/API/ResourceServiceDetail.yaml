@@ -377,4 +377,4 @@ Monitoring.ServiceDetail:
               type: string
               nullable: true
               description: "Service resource performance graph endpoint"
-              example: "/centreon/api/v21.10/monitoring/hosts/14/services/26/metrics/performance"
+              example: "/centreon/api/v22.04/monitoring/hosts/14/services/26/metrics/performance"
