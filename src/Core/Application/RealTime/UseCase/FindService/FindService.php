@@ -228,7 +228,7 @@ class FindService
     }
 
     /**
-     * Offuscate passwords in the commandline
+     * Obfuscate passwords in the commandline
      *
      * @param Service $service
      * @return string|null
