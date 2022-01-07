@@ -770,8 +770,8 @@ class HostConfigurationRepositoryRDB extends AbstractRepositoryDRB implements Ho
      */
     public function updateHost(Host $host): void
     {
-        $isInTransaction = $this->db->inTransaction();
-        if (!$isInTransaction) {
+        $isAlreadyInTransaction = $this->db->inTransaction();
+        if (!$isAlreadyInTransaction) {
             $this->db->beginTransaction();
         }
         try {
@@ -812,11 +812,11 @@ class HostConfigurationRepositoryRDB extends AbstractRepositoryDRB implements Ho
             $statement->bindValue(':notifications_status', Host::OPTION_DEFAULT, \PDO::PARAM_STR);
             $statement->execute();
             $this->updateMonitoringServerRelation($host->getId(), $host->getMonitoringServer()->getId());
-            if (!$isInTransaction) {
+            if (!$isAlreadyInTransaction) {
                 $this->db->commit();
             }
         } catch (\Throwable $ex) {
-            if (!$isInTransaction) {
+            if (!$isAlreadyInTransaction) {
                 $this->db->rollBack();
             }
             throw $ex;
