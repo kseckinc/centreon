@@ -277,9 +277,9 @@ class Contact implements UserInterface, ContactInterface
      * Set if the user is admin or not.
      *
      * @param bool $isAdmin
-     * @return static
+     * @return self
      */
-    public function setAdmin(bool $isAdmin): static
+    public function setAdmin(bool $isAdmin): self
     {
         $this->isAdmin = $isAdmin;
         if ($this->isAdmin) {
@@ -298,10 +298,10 @@ class Contact implements UserInterface, ContactInterface
     }
 
     /**
-     * @param int $templateId
-     * @return static
+     * @param int|null $templateId
+     * @return self
      */
-    public function setTemplateId(?int $templateId): static
+    public function setTemplateId(?int $templateId): self
     {
         $this->templateId = $templateId;
         return $this;
@@ -317,9 +317,9 @@ class Contact implements UserInterface, ContactInterface
 
     /**
      * @param bool $isActive
-     * @return static
+     * @return self
      */
-    public function setIsActive(bool $isActive): static
+    public function setIsActive(bool $isActive): self
     {
         $this->isActive = $isActive;
         return $this;
@@ -353,9 +353,9 @@ class Contact implements UserInterface, ContactInterface
 
     /**
      * @param string|null $token
-     * @return static
+     * @return self
      */
-    public function setToken(?string $token): static
+    public function setToken(?string $token): self
     {
         $this->token = $token;
         return $this;
@@ -371,9 +371,9 @@ class Contact implements UserInterface, ContactInterface
 
     /**
      * @param string|null $encodedPassword
-     * @return static
+     * @return self
      */
-    public function setEncodedPassword(?string $encodedPassword): static
+    public function setEncodedPassword(?string $encodedPassword): self
     {
         $this->encodedPassword = $encodedPassword;
         return $this;
@@ -454,9 +454,9 @@ class Contact implements UserInterface, ContactInterface
 
     /**
      * @param bool $hasAccessToApiConfiguration
-     * @return static
+     * @return self
      */
-    public function setAccessToApiConfiguration(bool $hasAccessToApiConfiguration): static
+    public function setAccessToApiConfiguration(bool $hasAccessToApiConfiguration): q
     {
         $this->hasAccessToApiConfiguration = $hasAccessToApiConfiguration;
 
@@ -479,9 +479,9 @@ class Contact implements UserInterface, ContactInterface
 
     /**
      * @param bool $hasAccessToApiRealTime
-     * @return static
+     * @return self
      */
-    public function setAccessToApiRealTime(bool $hasAccessToApiRealTime): static
+    public function setAccessToApiRealTime(bool $hasAccessToApiRealTime): self
     {
         $this->hasAccessToApiRealTime = $hasAccessToApiRealTime;
         if ($this->hasAccessToApiRealTime) {
@@ -552,9 +552,9 @@ class Contact implements UserInterface, ContactInterface
      * timezone setter
      *
      * @param \DateTimeZone $timezone
-     * @return static
+     * @return self
      */
-    public function setTimezone(\DateTimeZone $timezone): static
+    public function setTimezone(\DateTimeZone $timezone): self
     {
         $this->timezone = $timezone;
         return $this;
@@ -642,9 +642,9 @@ class Contact implements UserInterface, ContactInterface
 
     /**
      * @param bool $isOneClickExportEnabled
-     * @return static
+     * @return self
      */
-    public function setOneClickExportEnabled(bool $isOneClickExportEnabled): static
+    public function setOneClickExportEnabled(bool $isOneClickExportEnabled): self
     {
         $this->isOneClickExportEnabled = $isOneClickExportEnabled;
 
