@@ -456,7 +456,7 @@ class Contact implements UserInterface, ContactInterface
      * @param bool $hasAccessToApiConfiguration
      * @return self
      */
-    public function setAccessToApiConfiguration(bool $hasAccessToApiConfiguration): q
+    public function setAccessToApiConfiguration(bool $hasAccessToApiConfiguration): self
     {
         $this->hasAccessToApiConfiguration = $hasAccessToApiConfiguration;
 
