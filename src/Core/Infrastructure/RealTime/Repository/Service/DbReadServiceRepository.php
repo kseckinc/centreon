@@ -109,7 +109,7 @@ class DbReadServiceRepository extends AbstractRepositoryDRB implements ReadServi
 
         $statement->execute();
 
-        if (($row = $statement->fetch(\PDO::FETCH_ASSOC))) {
+        if ($row = $statement->fetch(\PDO::FETCH_ASSOC)) {
             return DbServiceFactory::createFromRecord($row);
         }
 
