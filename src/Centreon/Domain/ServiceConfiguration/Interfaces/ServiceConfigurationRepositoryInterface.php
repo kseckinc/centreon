@@ -94,5 +94,5 @@ interface ServiceConfigurationRepositoryInterface extends AccessControlListRepos
      * @param int $hostId
      * @throws \Exception
      */
-    public function removeServicesOnhost(int $hostId): void;
+    public function removeServicesOnHost(int $hostId): void;
 }

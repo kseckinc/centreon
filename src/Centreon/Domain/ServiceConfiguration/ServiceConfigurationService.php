@@ -345,7 +345,7 @@ class ServiceConfigurationService extends AbstractCentreonService implements Ser
         Assertion::notNull($host->getId(), 'Host::id');
         try {
             $this->debug('Remove services from a host', ['host_id' => $host->getId()]);
-            $this->serviceRepository->removeServicesOnhost($host->getId());
+            $this->serviceRepository->removeServicesOnHost($host->getId());
         } catch (\Throwable $ex) {
             $this->error(
                 sprintf(

@@ -377,7 +377,7 @@ class ServiceConfigurationRepositoryRDB extends AbstractRepositoryDRB implements
     /**
      * @inheritDoc
      */
-    public function removeServicesOnhost(int $hostId): void
+    public function removeServicesOnHost(int $hostId): void
     {
         $statement = $this->db->prepare(
             "DELETE service FROM `:db`.service
