@@ -27,7 +27,7 @@
     "@babel/preset-env": "^7.16.5",
     "@babel/preset-react": "^7.16.5",
     "@babel/preset-typescript": "^7.16.5",
-    "@lhci/cli": "^0.8.2",
+    "@lhci/cli": "^0.10.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
     "@svgr/webpack": "^6.1.2",
     "@testing-library/jest-dom": "^5.16.1",
